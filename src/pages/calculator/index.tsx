@@ -7,7 +7,7 @@
 
 import React, { Component } from "react";
 import Taro, { getCurrentInstance } from "@tarojs/taro";
-import { View, Text, Input, Video } from "@tarojs/components";
+import { View, Text, Input } from "@tarojs/components";
 import "./index.scss";
 import {
   KeyboardAwareScrollView,
@@ -25,7 +25,6 @@ import {
   LIST_TYPE,
   COMPUTE_WAY,
   OPTION,
-  DEMO_VIDEO
 } from "./constans";
 import { equalInterestCalc } from "./helper";
 import { isAndriod, setGlobalData, getStorageData, fomatFloat } from "@utils";
@@ -308,7 +307,7 @@ export default class HouseLoanCompute extends Component<any, any> {
   /**
    * input 值改变回调
    * @param data 配置项
-   * @param value 输入的值
+   * @param _value 输入的值
    * @param _index 当前配置项的索引
    */
   onInputChange = (data: any, _value: number, _index: number) => {
@@ -453,7 +452,7 @@ export default class HouseLoanCompute extends Component<any, any> {
 
   /**
    * 监听键盘收起事件
-   * @param frames 键盘对象
+   * @param _frames 键盘对象
    */
   onKeyboardDidHide = (_frames: Record<string, any>) => {
     this.setState({
@@ -847,15 +846,6 @@ export default class HouseLoanCompute extends Component<any, any> {
               onInputChange={this.onInputChange}
             />
 
-            <Video
-              className="video"
-              src={DEMO_VIDEO}
-              controls={false}
-              showFullscreenBtn={false}
-              autoplay
-              loop
-              muted
-            />
           </View>
         </KeyboardAwareScrollView>
 
