@@ -35,15 +35,6 @@ export default class TaroPickerSelector extends Component<
     };
   }
 
-  componentWillReceiveProps(nextProps: TaroPickerSelectorProps) {
-    if (nextProps.value !== this.props.value) {
-      const { value = [0] } = nextProps;
-      this.setState({
-        selectedValue: value
-      });
-    }
-  }
-
   showModal = () => {
     const { value = [0] } = this.props;
     this.setState({

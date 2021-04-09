@@ -72,10 +72,10 @@ const config = {
   },
   rn: {
     output: {
-      ios: 'ios/main.jsbundle',
-      iosAssetsDest: 'ios',
-      android: 'android/index.android.bundle',
-      androidAssetsDest: 'android'
+      ios: `dist/${process.env.TARO_ENV}/ios/main.jsbundle`,
+      iosAssetsDest: `dist/${process.env.TARO_ENV}/ios`,
+      android: `dist/${process.env.TARO_ENV}/android/index.android.bundle`,
+      androidAssetsDest: `dist/${process.env.TARO_ENV}/android`
     },
   }
 };
